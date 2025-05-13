@@ -7,6 +7,7 @@ I'm a passionate IT student and self-taught developer based in Rades, Tunisia. W
 - 🎓 Bachelor's degree in Computer Science (in progress) – ISET Rades
 - 💻 Former freelance web developer (Angular & Vue.js)
 - 📊 Intern at HubbleMind, building a full-stack data visualization app
+- 🤝 Collaborating on a team project to create a training platform
 - 🔄 Transitioning from full-stack web development to data analytics/engineering
 
 ## 🛠 Tech Stack
@@ -23,6 +24,12 @@ I'm a passionate IT student and self-taught developer based in Rades, Tunisia. W
 - Built a full-stack web application to execute user queries and render results using pie, bar, and line charts.
 - Integrated role-based access (Admin, User, Guest) with a clean, intuitive UI.
 - Stack: Angular, TypeScript, PHP (API), MySQL.
+
+### 🔹 Training Platform (Team Project)
+- Collaborating with 3 classmates to build a full-featured training and course management platform.
+- Features include course browsing, enrollment, and user roles (admin, trainer, learner).
+- Contributing to both front-end and back-end development using modern tools and clean architecture.
+- GitHub: [Tayss1r/Training_Platform](https://github.com/Tayss1r/Training_Platform)
 
 ### 🔹 Spotify Clone (Freelance Project)
 - Created a music streaming web app with Angular and Angular Material.
