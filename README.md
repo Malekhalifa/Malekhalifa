@@ -44,8 +44,6 @@ I'm a passionate IT student and self-taught developer based in Rades, Tunisia. W
 
 - 🐍 Python Essentials 1 – Cisco Academy  
 - 🗃️ Database Programming with SQL – Oracle Academy  
-- 🏅 Code Warriors Hackathon Participant – Enet'Com Junior Entreprise
-
 ## 📫 Let's Connect
 
 - 📧 Email: [malek.khalifa321@gmail.com](mailto:malek.khalifa321@gmail.com)
