@@ -53,9 +53,6 @@ A full-stack platform that connects to a PostgreSQL database, finds data-quality
 - Symfony 7.2 shop with authentication, product catalog and categories, cart, order management, admin dashboard, search and pagination.
 - Stack: PHP 8.2, Symfony, Twig, MySQL.
 
-### 🔹 [Centre Loisirs](https://github.com/Malekhalifa/centre-loisirs)
-- Leisure-center web app built with Vue 3, Pinia, Vue Router, Vite and Tailwind CSS.
-
 ### 🔹 [Training Platform](https://github.com/Tayss1r/Training_Platform) *(Team Project)*
 - Course and training management platform built with 3 classmates: course browsing, enrollment, and roles (admin, trainer, learner).
 - Stack: PHP 8.2, Symfony 7.2, Twig.
