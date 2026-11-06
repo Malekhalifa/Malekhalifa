@@ -1,59 +1,73 @@
 # 👋 Hi, I'm Malek Khalifa
 
-I'm a passionate IT student and self-taught developer based in Rades, Tunisia. With a strong foundation in web development and a growing interest in data analysis and engineering, I'm currently exploring ways to combine clean UI design with meaningful, data-driven functionality.
+IT student and self-taught developer based in Rades, Tunisia. I started in web development (Angular, Vue.js, Symfony) and now build data-driven and AI-assisted tools: multi-agent data-quality validation, and research pipelines that test ideas before believing them.
 
 ## 💡 About Me
 
-- 🎓 Bachelor's degree in Computer Science (in progress) – ISET Rades
-- 💻 Former freelance web developer (Angular & Vue.js)
-- 🤝 Collaborating on a team project to create a training platform
-- 🔄 Transitioning from full-stack web development to data analytics/engineering
+- 🎓 Bachelor's degree in Computer Science (in progress), ISET Rades
+- 🔬 Final year project: **QualityLab**, an AI-powered data-quality platform built on a multi-agent pipeline
+- 📊 Recently shipped **Sift**, a pre-registered research pipeline for testing trading strategies on free data
+- 💻 Former freelance web developer (Angular and Vue.js)
+- 🔄 Moving from full-stack web development toward data analytics, data engineering and applied AI
 
 ## 🛠 Tech Stack
 
-**Languages:** JavaScript, TypeScript, Python, PHP, SQL, Java, C  
-**Frameworks & Libraries:** Angular, Vue.js, Django, Symfony, JavaFX  
-**Databases:** PostgreSQL, MongoDB, MySQL, SQL Server, Oracle DB  
-**AI & Data:** Agno (multi-agent framework), Google Gemini API, Celery, Pandas  
-**Tools:** UML, SSIS, SSMS, REST APIs  
-**Other:** OOP, UI/UX, Data Visualization, Real-time Streaming (SSE)
+**Languages:** Python, TypeScript, JavaScript, PHP, SQL, Java, C  
+**Frontend:** Angular, Vue 3, Tailwind CSS, Chart.js  
+**Backend:** Django REST Framework, Celery, Redis, Symfony  
+**Databases:** PostgreSQL, MySQL, SQLite, MongoDB, SQL Server, Oracle DB  
+**AI & Data:** Agno (multi-agent framework), Google Gemini API, pandas, Parquet, pytest  
+**Tools:** uv, Git, LaTeX, Mermaid, UML, SSIS, SSMS, REST APIs  
+**Other:** OOP, UI/UX, Data Visualization, i18n, Statistics and backtesting
 
-## 🔨 Projects
+## 🔨 Featured Projects
 
-### 🔹 QualityLab — AI-Powered Data Quality Platform *(Final Year Project)*
-- Built a full-stack platform that connects to a PostgreSQL database and automatically detects data quality issues using a **multi-agent AI pipeline**.
-- Implemented **4 specialised AI agents** (Schema Integrity Validator, Cross-Row Validator, Row-Level Logic Validator, Fix Planner) orchestrated with the **Agno framework** and **Google Gemini**.
-- Agents detect schema violations, referential integrity issues, and business rule breaches (invalid phone formats, date inversions, negative quotas, routing self-loops, etc.) and generate structured **human-reviewable fix cards**.
-- Human-in-the-loop fix review system: users inspect, accept, or reject each proposed SQL fix before it is applied to a shadow `_clean` table — source data is never modified.
-- Real-time agent progress streamed to the frontend via **Server-Sent Events (SSE)**.
-- Generated **2 million rows** of realistic synthetic training data (70% valid / 30% intentionally corrupt across 33 business tables) using a custom data generator with topological FK resolution.
-- Stack: **Angular, Django REST Framework, PostgreSQL, MongoDB, Celery, Agno, Google Gemini API**.
+### 🔹 [Sift](https://github.com/Malekhalifa/sift): Honest testing for trading ideas
+A pre-registered research pipeline that tests short-term US stock strategies on free data and catches the ideas that only look like they work.
+
+- Tested **12 trading ideas** (breakouts, mean reversion, earnings drift, insider buying, political-news event studies and more). None passed, and a clear "no" is the result.
+- Built to catch the two traps that make most ideas look good: **selection luck** and **the market's own rise**.
+- Protocol, parameter grid and pass criteria are committed *before* every run. Walk-forward testing, a log of every configuration tried (298), a Deflated Sharpe check, a market-adjusted check, and replication on unseen stocks.
+- 2025+ data is a locked holdout, refused by the code unless explicitly unlocked. Real money traded: **$0**.
+- Findings published as a [whitepaper (PDF)](https://github.com/Malekhalifa/sift/blob/main/docs/Trading-Research-Findings.pdf) with plain-language write-ups per idea.
+- Stack: **Python 3.12+, uv, pandas, Parquet, SQLite trial registry, pytest, Alpaca free data tier, SEC EDGAR, USAspending.gov, LaTeX, Mermaid**. 208 tests.
+
+### 🔹 QualityLab: AI-Powered Data Quality Platform *(Final Year Project)*
+A full-stack platform that connects to a PostgreSQL database, finds data-quality issues with a **multi-agent AI pipeline**, and proposes SQL fixes that a human reviews before anything runs.
+
+- **6-agent pipeline** orchestrated with **Agno** and **Google Gemini**: Database Profiler, Schema Integrity, Statistical, Structural and Relational validators, and a Data Fix Planner. The four validators run in parallel, then results are deduplicated, ranked and turned into fix cards.
+- Human-in-the-loop fixes: each proposed SQL fix is reviewed with a pre-flight dry run, then approved or rejected before execution.
+- Async pipeline runs on **Celery + Redis**, with job status, results review, conversational AI chat over findings, history, domain rules/guidelines, report export and an admin dashboard (stats, users, pipeline performance, audit log).
+- Angular 21 front end with standalone components, signals, Tailwind CSS, dark/light themes and **English / French / Arabic** i18n.
+- Generated **2 million rows** of synthetic training data (70% valid, 30% intentionally corrupt, across 33 business tables) with topological FK resolution.
+- Stack: **Angular 21, Django 5 + DRF, PostgreSQL, Celery, Redis, Agno, Gemini**.
 - GitHub: [Backend (Django)](https://github.com/Malekhalifa/PFE-Project-Backend-Django) · [Frontend (Angular)](https://github.com/Malekhalifa/PFE-Project-Frontend-Angular)
 
-### 🔹 HubbleMind Visualization App
-- Built a full-stack web application to execute user queries and render results using pie, bar, and line charts.
-- Integrated role-based access (Admin, User, Guest) with a clean, intuitive UI.
-- Stack: Angular, TypeScript, PHP (API), MySQL.
+## 🧱 Other Projects
 
-### 🔹 Training Platform (Team Project)
-- Collaborating with 3 classmates to build a full-featured training and course management platform.
-- Features include course browsing, enrollment, and user roles (admin, trainer, learner).
-- Contributing to both front-end and back-end development using modern tools and clean architecture.
-- GitHub: [Tayss1r/Training_Platform](https://github.com/Tayss1r/Training_Platform)
+### 🔹 [Dynamic Data Visualization Platform](https://github.com/Malekhalifa/dynamic-data-visualization-platform)
+- Web app to run user queries and render the results as pie, bar and line charts, with role-based access (Admin, User, Guest).
+- Stack: Angular, TypeScript, Chart.js, Tailwind CSS. · [Live demo](https://dynamic-data-visualization-platform.vercel.app)
 
-### 🔹 Spotify Clone (Freelance Project)
-- Created a music streaming web app with Angular and Angular Material.
-- Included playlist management, playback features, and RESTful API integration.
+### 🔹 [E-commerce (Symfony)](https://github.com/Malekhalifa/e-commerce-symfony)
+- Symfony 7.2 shop with authentication, product catalog and categories, cart, order management, admin dashboard, search and pagination.
+- Stack: PHP 8.2, Symfony, Twig, MySQL.
 
-### 🔹 Book Collection Manager (Freelance Project)
-- Built with Vue 3 using Composition API and Pinia for state management.
-- Integrated Google Books API for search and pagination.
-- Local storage for collection tracking and responsive design enhancements.
+### 🔹 [Centre Loisirs](https://github.com/Malekhalifa/centre-loisirs)
+- Leisure-center web app built with Vue 3, Pinia, Vue Router, Vite and Tailwind CSS.
+
+### 🔹 [Training Platform](https://github.com/Tayss1r/Training_Platform) *(Team Project)*
+- Course and training management platform built with 3 classmates: course browsing, enrollment, and roles (admin, trainer, learner).
+- Stack: PHP 8.2, Symfony 7.2, Twig.
+
+### 🔹 Freelance work
+- **Spotify Clone:** music streaming web app with Angular and Angular Material, playlist management, playback and REST API integration.
+- **Book Collection Manager:** Vue 3 (Composition API, Pinia), Google Books API search and pagination, local-storage collection tracking.
 
 ## 📈 Certifications
 
-- 🐍 Python Essentials 1 – Cisco Academy  
-- 🗃️ Database Programming with SQL – Oracle Academy  
+- 🐍 Python Essentials 1, Cisco Academy
+- 🗃️ Database Programming with SQL, Oracle Academy
 
 ## 📫 Let's Connect
 
@@ -63,4 +77,4 @@ I'm a passionate IT student and self-taught developer based in Rades, Tunisia. W
 
 ---
 
-Thanks for visiting my GitHub! I'm always open to collaboration and learning opportunities—especially in data analysis and engineering.
+Thanks for visiting! I'm open to collaboration and learning opportunities, especially in data analysis, data engineering and applied AI.
