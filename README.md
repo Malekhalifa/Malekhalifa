@@ -35,9 +35,9 @@ A pre-registered research pipeline that tests short-term US stock strategies on 
 ### 🔹 QualityLab: AI-Powered Data Quality Platform *(Final Year Project)*
 A full-stack platform that connects to a PostgreSQL database, finds data-quality issues with a **multi-agent AI pipeline**, and proposes SQL fixes that a human reviews before anything runs.
 
-- **6-agent pipeline** orchestrated with **Agno** and **Google Gemini**: Database Profiler, Schema Integrity, Statistical, Structural and Relational validators, and a Data Fix Planner. The four validators run in parallel, then results are deduplicated, ranked and turned into fix cards.
+- **Multi-agent pipeline** orchestrated with **Agno** and **Google Gemini**: schema check and profiling, then Statistical, Structural and Relational validators in parallel; a reducer deduplicates and ranks findings, a Data Fix Planner turns them into SQL fix cards, and a verifier checks them.
 - Human-in-the-loop fixes: each proposed SQL fix is reviewed with a pre-flight dry run, then approved or rejected before execution.
-- Async pipeline runs on **Celery + Redis**, with job status, results review, conversational AI chat over findings, history, domain rules/guidelines, report export and an admin dashboard (stats, users, pipeline performance, audit log).
+- Async pipeline runs on **Celery + Redis**, with job status, results review, conversational AI chat over findings, history, domain rules, report export and an admin dashboard (stats, users, pipeline performance, audit log).
 - Angular 21 front end with standalone components, signals, Tailwind CSS, dark/light themes and **English / French / Arabic** i18n.
 - Generated **2 million rows** of synthetic training data (70% valid, 30% intentionally corrupt, across 33 business tables) with topological FK resolution.
 - Stack: **Angular 21, Django 5 + DRF, PostgreSQL, Celery, Redis, Agno, Gemini**.
@@ -46,11 +46,11 @@ A full-stack platform that connects to a PostgreSQL database, finds data-quality
 ## 🧱 Other Projects
 
 ### 🔹 [Dynamic Data Visualization Platform](https://github.com/Malekhalifa/dynamic-data-visualization-platform)
-- Web app to run user queries and render the results as pie, bar and line charts, with role-based access (Admin, User, Guest).
+- Web app to run user queries and render the results as zoomable pie, bar and line charts, with query history, favourites and CSV export.
 - Stack: Angular, TypeScript, Chart.js, Tailwind CSS. · [Live demo](https://dynamic-data-visualization-platform.vercel.app)
 
 ### 🔹 [E-commerce (Symfony)](https://github.com/Malekhalifa/e-commerce-symfony)
-- Symfony 7.2 shop with authentication, product catalog and categories, cart, order management, admin dashboard, search and pagination.
+- Symfony 7.2 shop with authentication, product catalog and categories, cart, order management, admin-only catalog and order pages, and pagination.
 - Stack: PHP 8.2, Symfony, Twig, MySQL.
 
 ### 🔹 [Training Platform](https://github.com/Tayss1r/Training_Platform) *(Team Project)*
